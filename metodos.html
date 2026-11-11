@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Métodos: innerHTML, getElementById, querySelector</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body style="background:#1A0A22;margin:0;padding:20px;">
+  <div class="exercise">
+    <h1>Métodos: innerHTML, getElementById, querySelector</h1>
+
+    <h2>1. innerHTML</h2>
+    <p id="mensaje">Hola mundo</p>
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+    <div id="imagen"></div>
+    <button onclick="agregarImagen()">Agregar imagen</button>
+    <hr>
+    <h2>2. document.getElementById()</h2>
+    <p id="aviso">Mensaje inicial</p>
+    <button onclick="mostrarMensaje()">Mostrar mensaje</button>
+    <br><br>
+    <button id="btn">Haz clic</button>
+    <button onclick="cambiarColor()">Cambiar color</button>
+    <hr>
+    <h2>3. querySelector()</h2>
+    <p class="destacado">Texto importante</p>
+    <button onclick="cambiarColorTexto()">Cambiar a rojo</button>
+    <br><br>
+    <button class="btn-enviar">Enviar</button>
+    <button onclick="deshabilitar()">Deshabilitar botón</button>
+    <script>
+        function cambiarTexto() {
+            document.getElementById("mensaje").innerHTML = "¡Bienvenido!";
+        }
+        function agregarImagen() {
+            document.getElementById("imagen").innerHTML =
+            '<img src="gato.jpg" width="100" alt="gato">';
+        }
+        function mostrarMensaje() {
+            var elemento = document.getElementById("aviso");
+            elemento.textContent = "Hola Estudiantes";
+        }
+        function cambiarColor() {
+            document.getElementById("btn").style.backgroundColor = "lightblue";
+        }
+        function cambiarColorTexto() {
+            document.querySelector(".destacado").style.color = "red";
+        }
+        function deshabilitar() {
+            document.querySelector(".btn-enviar").disabled = true;
+        }
+    </script>
+
+    <a href="index.html" class="back-link">← Volver al menú</a>
+  </div>
+</body>
+</html>

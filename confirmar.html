@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmar datos</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body style="background:#1A0A22;margin:0;padding:20px;">
+  <div class="exercise">
+    <h1>Confirmar datos</h1>
+
+    <script>
+      const continuar=confirm("desea registrar tus datos")
+      if(continuar){
+       let nombre = prompt('escribe tu nombre ');
+       let edad = Number(prompt('escribe tu edad '));
+        let espe = prompt('escribe tu especialidad ');
+        let direc = prompt('escribe tu direccions');
+        let corre = prompt('escribe tu correo ');
+         document.write("Nombre: "+ nombre + "<br>");
+        document.write("Edad: "+ edad + "<br>");
+        document.write("Especialidad:  "+ espe + "<br>");
+        document.write("Direccion: "+ direc + "<br>");
+         document.write("Correo: "+ corre + "<br>");
+      }
+      else{
+        alert("REPROBRADO")
+      }
+    </script>
+
+    <a href="index.html" class="back-link">← Volver al menú</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operaciones con switch</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body style="background:#1A0A22;margin:0;padding:20px;">
+  <div class="exercise">
+    <h1>Operaciones con switch</h1>
+
+    <script>
+        let n1=Number(prompt("escribe el primer numero"));
+        let n2=Number(prompt("escribe el numero 2"));
+        let ope = prompt('Que operacion le gustaria realizar 1 (+) 2 (-) 3 (*) 4 (/)');
+        switch(ope){
+       case "1" :
+         suma=n1+n2;
+        alert("el resultado de la suma es "+ suma );
+        break;
+        case "2" :
+         resta=n1-n2;
+        alert("el resultado de la resta es "+ resta );
+        break;
+        case "3" :
+          mul=n1*n2;
+         alert("el resultado de la multiplicacion es "+ mul );
+         break;
+         case "4" :
+         divi=n1/n2;
+         alert("el resultado de la divicion es "+ divi );
+         break;
+        }
+    </script>
+
+    <a href="index.html" class="back-link">← Volver al menú</a>
+  </div>
+</body>
+</html>

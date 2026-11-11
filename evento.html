@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Función que se ejecuta mediante un evento</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body style="background:#1A0A22;margin:0;padding:20px;">
+  <div class="exercise">
+    <h1>Función que se ejecuta mediante un evento</h1>
+
+    <p>Responde a acciones del usuario, como presionar un botón.</p>
+    <h3 id="titulo">Mi primera página</h3>
+    <button id="boton">Cambiar texto</button>
+    <script>
+        const boton = document.getElementById("boton");
+        const titulo = document.getElementById("titulo");
+        boton.addEventListener("click", function() {
+            titulo.textContent = "¡Estoy aprendiendo JavaScript!";
+        });
+    </script>
+
+    <a href="index.html" class="back-link">← Volver al menú</a>
+  </div>
+</body>
+</html>

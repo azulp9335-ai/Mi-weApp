@@ -1,0 +1,185 @@
+/* Estilo morado — estructura distinta (sidebar + grid) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #1A0A22;
+  color: #EDE4F5;
+  min-height: 100vh;
+}
+
+/* Layout principal: sidebar fija + contenido */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #7C4C88 0%, #542F60 50%, #2C0A42 100%);
+  padding: 24px 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.sidebar .brand {
+  padding: 0 20px 24px;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+  margin-bottom: 16px;
+}
+
+.sidebar .brand h1 {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.sidebar .brand span {
+  font-size: 12px;
+  color: #D1B9ED;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #EDE4F5;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-left: 3px solid transparent;
+  transition: .2s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: rgba(172,91,195,.35);
+  border-left-color: #D1B9ED;
+  color: #fff;
+}
+
+.main {
+  flex: 1;
+  padding: 32px 40px;
+  background: #F4EBF9;
+  color: #2C0A42;
+}
+
+.main h2.page-title {
+  font-size: 28px;
+  color: #7C4C88;
+  margin-bottom: 8px;
+}
+
+.main .subtitle {
+  color: #683D74;
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+/* Grid de tarjetas (no secciones apiladas) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(124,76,136,.12);
+  border: 1px solid #E0D0F0;
+  transition: transform .15s, box-shadow .15s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(124,76,136,.22);
+}
+
+.card .tag {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.tag-basicos { background: #E8D5F5; color: #7C4C88; }
+.tag-cond { background: #D1B9ED; color: #542F60; }
+.tag-func { background: #AC5BC3; color: #fff; }
+.tag-dom { background: #9643B3; color: #fff; }
+.tag-for { background: #BEA1E6; color: #2C0A42; }
+.tag-do { background: #7C4C88; color: #fff; }
+
+.card h3 {
+  font-size: 16px;
+  color: #2C0A42;
+  margin-bottom: 10px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #7C4C88;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.card a:hover { color: #AC5BC3; text-decoration: underline; }
+
+/* Página de ejercicio */
+.exercise {
+  max-width: 720px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(124,76,136,.18);
+  color: #2C0A42;
+}
+
+.exercise h1 {
+  font-size: 24px;
+  color: #7C4C88;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid #AC5BC3;
+}
+
+.exercise .back-link {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #7C4C88, #AC5BC3);
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.exercise .back-link:hover { opacity: .9; }
+
+.exercise button {
+  padding: 8px 14px;
+  margin: 4px;
+  border-radius: 10px;
+  border: 1px solid #AC5BC3;
+  background: #F4EBF9;
+  color: #542F60;
+  cursor: pointer;
+}
+
+.exercise button:hover { background: #D1B9ED; }
+
+@media (max-width: 800px) {
+  .layout { flex-direction: column; }
+  .sidebar { width: 100%; height: auto; position: relative; }
+  .main { padding: 20px; }
+}
